@@ -1,0 +1,209 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Getting Started with Next.js 14",
+      "slug": "getting-started-nextjs-14",
+      "excerpt": "Learn the fundamentals of Next.js 14 and its new features including App Router, Server Components, and more.",
+      "content": "Next.js 14 introduces several exciting features that make building modern web applications easier and more performant. In this comprehensive guide, we'll explore the App Router, Server Components, and other key features.\n\n## App Router\n\nThe App Router is a new routing system that provides better performance and developer experience. It uses a file-system based routing approach with improved layouts and nested routing.\n\n## Server Components\n\nServer Components allow you to render components on the server, reducing the JavaScript bundle size and improving performance.\n\n## Key Benefits\n\n- Better performance\n- Improved SEO\n- Enhanced developer experience\n- Built-in optimizations",
+      "author": "John Doe",
+      "publishedAt": "2024-01-15T10:00:00Z",
+      "updatedAt": "2024-01-15T10:00:00Z",
+      "tags": ["nextjs", "react", "javascript", "web-development"],
+      "category": "Tutorial",
+      "readTime": 5,
+      "featured": true,
+      "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=400&fit=crop",
+      "likes": 42,
+      "views": 1250
+    },
+    {
+      "id": 2,
+      "title": "Advanced Data Fetching Patterns",
+      "slug": "advanced-data-fetching-patterns",
+      "excerpt": "Explore advanced data fetching patterns in Next.js including caching, revalidation, and streaming.",
+      "content": "Data fetching is a crucial aspect of modern web applications. Next.js provides several powerful patterns for fetching and managing data efficiently.\n\n## Caching Strategies\n\nNext.js implements several caching strategies to optimize performance:\n\n- Request Memoization\n- Data Cache\n- Full Route Cache\n- Router Cache\n\n## Revalidation\n\nRevalidation allows you to update cached data when needed, ensuring your users always see fresh content.\n\n## Streaming\n\nStreaming enables progressive loading of content, improving perceived performance.",
+      "author": "Jane Smith",
+      "publishedAt": "2024-01-12T14:30:00Z",
+      "updatedAt": "2024-01-12T14:30:00Z",
+      "tags": ["nextjs", "data-fetching", "caching", "performance"],
+      "category": "Advanced",
+      "readTime": 8,
+      "featured": true,
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
+      "likes": 38,
+      "views": 980
+    },
+    {
+      "id": 3,
+      "title": "Building Responsive UIs with Tailwind CSS",
+      "slug": "building-responsive-uis-tailwind",
+      "excerpt": "Master responsive design with Tailwind CSS and create beautiful, mobile-first user interfaces.",
+      "content": "Tailwind CSS revolutionizes how we approach styling in modern web development. Its utility-first approach makes it easy to build responsive, maintainable designs.\n\n## Responsive Design Principles\n\n- Mobile-first approach\n- Flexible grid systems\n- Consistent spacing\n- Typography scales\n\n## Tailwind Utilities\n\nTailwind provides a comprehensive set of utilities for:\n\n- Layout and positioning\n- Colors and typography\n- Spacing and sizing\n- Effects and animations\n\n## Best Practices\n\n- Use semantic class names\n- Leverage responsive prefixes\n- Optimize for performance\n- Maintain consistency",
+      "author": "Mike Johnson",
+      "publishedAt": "2024-01-10T09:15:00Z",
+      "updatedAt": "2024-01-10T09:15:00Z",
+      "tags": ["tailwind", "css", "responsive-design", "ui"],
+      "category": "Design",
+      "readTime": 6,
+      "featured": false,
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=400&fit=crop",
+      "likes": 29,
+      "views": 756
+    },
+    {
+      "id": 4,
+      "title": "Error Handling in Next.js Applications",
+      "slug": "error-handling-nextjs-applications",
+      "excerpt": "Learn how to implement comprehensive error handling in Next.js with error boundaries and custom error pages.",
+      "content": "Error handling is essential for creating robust web applications. Next.js provides several mechanisms for handling errors gracefully.\n\n## Error Boundaries\n\nError boundaries catch JavaScript errors anywhere in the component tree and display fallback UI.\n\n## Error Pages\n\nNext.js allows you to create custom error pages for different scenarios:\n\n- 404 Not Found\n- 500 Server Error\n- Custom error pages\n\n## Best Practices\n\n- Implement error boundaries\n- Provide meaningful error messages\n- Log errors for debugging\n- Graceful degradation",
+      "author": "Sarah Wilson",
+      "publishedAt": "2024-01-08T16:45:00Z",
+      "updatedAt": "2024-01-08T16:45:00Z",
+      "tags": ["nextjs", "error-handling", "react", "debugging"],
+      "category": "Best Practices",
+      "readTime": 7,
+      "featured": false,
+      "image": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=400&fit=crop",
+      "likes": 33,
+      "views": 892
+    },
+    {
+      "id": 5,
+      "title": "Image Optimization with Next.js",
+      "slug": "image-optimization-nextjs",
+      "excerpt": "Optimize images for better performance and Core Web Vitals using Next.js Image component.",
+      "content": "Images are often the largest assets on web pages. Next.js provides powerful image optimization features to improve performance.\n\n## Next.js Image Component\n\nThe Image component provides:\n\n- Automatic optimization\n- Lazy loading\n- Responsive images\n- WebP format support\n\n## Core Web Vitals\n\nOptimizing images improves:\n\n- Largest Contentful Paint (LCP)\n- Cumulative Layout Shift (CLS)\n- First Input Delay (FID)\n\n## Best Practices\n\n- Use appropriate image formats\n- Implement responsive images\n- Optimize image sizes\n- Use placeholders",
+      "author": "David Brown",
+      "publishedAt": "2024-01-05T11:20:00Z",
+      "updatedAt": "2024-01-05T11:20:00Z",
+      "tags": ["nextjs", "images", "performance", "optimization"],
+      "category": "Performance",
+      "readTime": 4,
+      "featured": true,
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop",
+      "likes": 45,
+      "views": 1100
+    },
+    {
+      "id": 6,
+      "title": "MDX and Markdown in Next.js",
+      "slug": "mdx-markdown-nextjs",
+      "excerpt": "Create rich, interactive content with MDX and Markdown in your Next.js applications.",
+      "content": "MDX combines the simplicity of Markdown with the power of React components, making it perfect for creating rich, interactive content.\n\n## What is MDX?\n\nMDX allows you to:\n\n- Write JSX in your Markdown\n- Use React components\n- Create interactive content\n- Maintain clean syntax\n\n## Setup and Configuration\n\nSetting up MDX in Next.js involves:\n\n- Installing dependencies\n- Configuring webpack\n- Creating MDX components\n- Styling with Tailwind\n\n## Use Cases\n\n- Documentation sites\n- Blog posts\n- Interactive tutorials\n- Rich content pages",
+      "author": "Emily Davis",
+      "publishedAt": "2024-01-03T13:10:00Z",
+      "updatedAt": "2024-01-03T13:10:00Z",
+      "tags": ["mdx", "markdown", "nextjs", "content"],
+      "category": "Content",
+      "readTime": 9,
+      "featured": false,
+      "image": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=400&fit=crop",
+      "likes": 41,
+      "views": 1034
+    }
+  ],
+  "categories": [
+    { "id": 1, "name": "Tutorial", "slug": "tutorial", "count": 1 },
+    { "id": 2, "name": "Advanced", "slug": "advanced", "count": 1 },
+    { "id": 3, "name": "Design", "slug": "design", "count": 1 },
+    { "id": 4, "name": "Best Practices", "slug": "best-practices", "count": 1 },
+    { "id": 5, "name": "Performance", "slug": "performance", "count": 1 },
+    { "id": 6, "name": "Content", "slug": "content", "count": 1 }
+  ],
+  "tags": [
+    { "name": "nextjs", "count": 4 },
+    { "name": "react", "count": 2 },
+    { "name": "javascript", "count": 1 },
+    { "name": "web-development", "count": 1 },
+    { "name": "data-fetching", "count": 1 },
+    { "name": "caching", "count": 1 },
+    { "name": "performance", "count": 2 },
+    { "name": "tailwind", "count": 1 },
+    { "name": "css", "count": 1 },
+    { "name": "responsive-design", "count": 1 },
+    { "name": "ui", "count": 1 },
+    { "name": "error-handling", "count": 1 },
+    { "name": "debugging", "count": 1 },
+    { "name": "images", "count": 1 },
+    { "name": "optimization", "count": 1 },
+    { "name": "mdx", "count": 1 },
+    { "name": "markdown", "count": 1 },
+    { "name": "content", "count": 1 }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john@example.com",
+      "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
+      "bio": "Full-stack developer passionate about modern web technologies.",
+      "social": {
+        "twitter": "@johndoe",
+        "github": "johndoe",
+        "linkedin": "johndoe"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "email": "jane@example.com",
+      "avatar": "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face",
+      "bio": "Frontend architect with expertise in React and Next.js.",
+      "social": {
+        "twitter": "@janesmith",
+        "github": "janesmith",
+        "linkedin": "janesmith"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Mike Johnson",
+      "email": "mike@example.com",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
+      "bio": "UI/UX designer and developer focused on creating beautiful user experiences.",
+      "social": {
+        "twitter": "@mikejohnson",
+        "github": "mikejohnson",
+        "linkedin": "mikejohnson"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Sarah Wilson",
+      "email": "sarah@example.com",
+      "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
+      "bio": "Software engineer specializing in error handling and debugging.",
+      "social": {
+        "twitter": "@sarahwilson",
+        "github": "sarahwilson",
+        "linkedin": "sarahwilson"
+      }
+    },
+    {
+      "id": 5,
+      "name": "David Brown",
+      "email": "david@example.com",
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face",
+      "bio": "Performance optimization expert and web performance consultant.",
+      "social": {
+        "twitter": "@davidbrown",
+        "github": "davidbrown",
+        "linkedin": "davidbrown"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Emily Davis",
+      "email": "emily@example.com",
+      "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face",
+      "bio": "Content strategist and technical writer passionate about developer experience.",
+      "social": {
+        "twitter": "@emilydavis",
+        "github": "emilydavis",
+        "linkedin": "emilydavis"
+      }
+    }
+  ]
+}
+
