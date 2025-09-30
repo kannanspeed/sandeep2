@@ -55,11 +55,11 @@ export default function AboutPage() {
       {/* Hero Section */}
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold tracking-tight mb-6">
-          About Next.js Comprehensive Blog
+          About Kannan Blogs
         </h1>
         <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
           We're passionate about modern web development and creating comprehensive resources 
-          that showcase the full power of Next.js and the React ecosystem.
+          that showcase the full power of modern web technologies and best practices.
         </p>
       </div>
 
@@ -68,7 +68,7 @@ export default function AboutPage() {
         <CardHeader>
           <CardTitle>Our Mission</CardTitle>
           <CardDescription>
-            Empowering developers with comprehensive Next.js knowledge
+            Empowering developers with comprehensive web development knowledge
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -76,7 +76,7 @@ export default function AboutPage() {
             <div>
               <h3 className="text-lg font-semibold mb-4">What We Do</h3>
               <p className="text-muted-foreground mb-4">
-                This blog serves as a comprehensive showcase of modern Next.js development practices. 
+                This blog serves as a comprehensive showcase of modern web development practices. 
                 We demonstrate real-world implementations of advanced features including:
               </p>
               <ul className="space-y-2 text-sm text-muted-foreground">

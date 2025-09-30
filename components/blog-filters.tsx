@@ -20,14 +20,7 @@ export async function BlogFilters() {
           <FilterSection
             items={categories}
             paramKey="category"
-            renderItem={(category) => (
-              <div className="flex items-center justify-between">
-                <span>{category.name}</span>
-                <Badge variant="secondary" className="text-xs">
-                  {category.count}
-                </Badge>
-              </div>
-            )}
+            type="category"
           />
         </CardContent>
       </Card>
@@ -41,14 +34,7 @@ export async function BlogFilters() {
           <FilterSection
             items={tags.slice(0, 10)}
             paramKey="tag"
-            renderItem={(tag) => (
-              <div className="flex items-center justify-between">
-                <span>{tag.name}</span>
-                <Badge variant="secondary" className="text-xs">
-                  {tag.count}
-                </Badge>
-              </div>
-            )}
+            type="tag"
           />
         </CardContent>
       </Card>
@@ -67,9 +53,7 @@ export async function BlogFilters() {
               { value: 'likes', label: 'Most Liked' },
             ]}
             paramKey="sort"
-            renderItem={(item) => (
-              <span>{item.label}</span>
-            )}
+            type="sort"
           />
         </CardContent>
       </Card>

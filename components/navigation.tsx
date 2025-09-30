@@ -30,7 +30,7 @@ export function Navigation() {
               <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
                 <BookOpen className="h-5 w-5 text-primary-foreground" />
               </div>
-              <span className="text-xl font-bold gradient-text">NextBlog</span>
+              <span className="text-xl font-bold gradient-text">Kannan Blogs</span>
             </Link>
           </div>
 

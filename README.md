@@ -1,6 +1,6 @@
-# Next.js Comprehensive Blog
+# Kannan Blogs
 
-A feature-rich blog application showcasing all modern Next.js capabilities including routing, data fetching, caching, streaming, styling, error handling, image optimization, metadata, MDX, and more.
+A feature-rich blog application showcasing modern web development capabilities including routing, data fetching, caching, streaming, styling, error handling, image optimization, metadata, MDX, and more.
 
 ## 🚀 Features
 
@@ -101,7 +101,7 @@ A feature-rich blog application showcasing all modern Next.js capabilities inclu
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd nextjs-comprehensive-blog
+cd kannan-blogs
 ```
 
 2. Install dependencies:

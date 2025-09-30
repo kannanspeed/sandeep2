@@ -61,10 +61,10 @@ export default function HomePage() {
         <div className="container mx-auto px-4 py-24 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
-              <span className="gradient-text">Next.js Comprehensive Blog</span>
+              <span className="gradient-text">Kannan Blogs</span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-muted-foreground max-w-3xl mx-auto">
-              A feature-rich blog application showcasing all modern Next.js capabilities including routing, 
+              A feature-rich blog application showcasing modern web development capabilities including routing, 
               data fetching, caching, streaming, styling, error handling, image optimization, metadata, MDX, and more.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">

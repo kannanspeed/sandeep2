@@ -3,20 +3,25 @@
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import { cn } from '@/lib/utils'
+import { Badge } from '@/components/ui/badge'
 
-interface FilterSectionProps<T> {
-  items: T[]
+interface FilterSectionProps {
+  items: Array<{
+    slug?: string
+    value?: string
+    name: string
+    count?: number
+    label?: string
+  }>
   paramKey: string
-  renderItem: (item: T) => React.ReactNode
-  getValue?: (item: T) => string
+  type: 'category' | 'tag' | 'sort'
 }
 
-export function FilterSection<T>({ 
+export function FilterSection({ 
   items, 
   paramKey, 
-  renderItem,
-  getValue = (item: any) => item.slug || item.value || item.name
-}: FilterSectionProps<T>) {
+  type
+}: FilterSectionProps) {
   const searchParams = useSearchParams()
   const currentValue = searchParams.get(paramKey)
 
@@ -29,6 +34,31 @@ export function FilterSection<T>({
     }
     params.delete('page') // Reset to first page when filtering
     return `/blog?${params.toString()}`
+  }
+
+  const getValue = (item: any) => {
+    return item.slug || item.value || item.name
+  }
+
+  const renderItem = (item: any) => {
+    switch (type) {
+      case 'category':
+      case 'tag':
+        return (
+          <div className="flex items-center justify-between">
+            <span>{item.name}</span>
+            {item.count && (
+              <Badge variant="secondary" className="text-xs">
+                {item.count}
+              </Badge>
+            )}
+          </div>
+        )
+      case 'sort':
+        return <span>{item.label}</span>
+      default:
+        return <span>{item.name}</span>
+    }
   }
 
   return (

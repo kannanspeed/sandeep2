@@ -10,12 +10,12 @@ export function Footer() {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold">N</span>
+                <span className="text-primary-foreground font-bold">K</span>
               </div>
-              <span className="text-xl font-bold gradient-text">NextBlog</span>
+              <span className="text-xl font-bold gradient-text">Kannan Blogs</span>
             </div>
             <p className="text-sm text-muted-foreground">
-              A comprehensive Next.js blog showcasing modern web development features and best practices.
+              A comprehensive blog showcasing modern web development features and best practices.
             </p>
             <div className="flex space-x-4">
               <Link
@@ -122,7 +122,7 @@ export function Footer() {
         <div className="mt-8 border-t pt-8">
           <div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
             <p className="text-sm text-muted-foreground">
-              © 2024 NextBlog. Built with Next.js, TypeScript, and Tailwind CSS.
+              © 2024 Kannan Blogs. Built with modern web technologies.
             </p>
             <div className="flex space-x-6 text-sm">
               <Link href="/privacy" className="text-muted-foreground hover:text-foreground transition-colors">
