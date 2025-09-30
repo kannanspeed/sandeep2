@@ -1,7 +1,5 @@
 // API utilities for data fetching with caching
-const API_BASE_URL = process.env.NODE_ENV === 'production' 
-  ? 'https://nextjs-comprehensive-blog.vercel.app/api'
-  : 'http://localhost:3000/api'
+import dbData from '../data/db.json'
 
 export interface Post {
   id: number
@@ -60,133 +58,81 @@ export async function getPosts(options?: {
   // Simulate slow data fetching
   await delay(1000)
   
-  const params = new URLSearchParams()
-  if (options?.featured !== undefined) params.append('featured', options.featured.toString())
-  if (options?.category) params.append('category', options.category)
-  if (options?.tag) params.append('tag', options.tag)
-  if (options?.limit) params.append('_limit', options.limit.toString())
-  if (options?.offset) params.append('_start', options.offset.toString())
-
-  const response = await fetch(`${API_BASE_URL}/posts?${params}`, {
-    next: { 
-      revalidate: 3600, // Revalidate every hour
-      tags: ['posts'] 
-    }
-  })
+  let posts = [...dbData.posts]
   
-  if (!response.ok) {
-    throw new Error('Failed to fetch posts')
+  // Apply filters
+  if (options?.featured !== undefined) {
+    posts = posts.filter(post => post.featured === options.featured)
   }
   
-  return response.json()
+  if (options?.category) {
+    posts = posts.filter(post => post.category === options.category)
+  }
+  
+  if (options?.tag) {
+    posts = posts.filter(post => post.tags.includes(options.tag!))
+  }
+  
+  // Apply pagination
+  if (options?.offset) {
+    posts = posts.slice(options.offset)
+  }
+  
+  if (options?.limit) {
+    posts = posts.slice(0, options.limit)
+  }
+  
+  return posts
 }
 
 // Fetch single post by slug
 export async function getPost(slug: string): Promise<Post | null> {
   await delay(800)
   
-  const response = await fetch(`${API_BASE_URL}/posts?slug=${slug}`, {
-    next: { 
-      revalidate: 1800, // Revalidate every 30 minutes
-      tags: ['posts', `post-${slug}`] 
-    }
-  })
-  
-  if (!response.ok) {
-    throw new Error('Failed to fetch post')
-  }
-  
-  const posts = await response.json()
-  return posts[0] || null
+  const post = dbData.posts.find(post => post.slug === slug)
+  return post || null
 }
 
 // Fetch categories
 export async function getCategories(): Promise<Category[]> {
   await delay(500)
   
-  const response = await fetch(`${API_BASE_URL}/categories`, {
-    next: { 
-      revalidate: 7200, // Revalidate every 2 hours
-      tags: ['categories'] 
-    }
-  })
-  
-  if (!response.ok) {
-    throw new Error('Failed to fetch categories')
-  }
-  
-  return response.json()
+  return dbData.categories
 }
 
 // Fetch tags
 export async function getTags(): Promise<Tag[]> {
   await delay(500)
   
-  const response = await fetch(`${API_BASE_URL}/tags`, {
-    next: { 
-      revalidate: 7200, // Revalidate every 2 hours
-      tags: ['tags'] 
-    }
-  })
-  
-  if (!response.ok) {
-    throw new Error('Failed to fetch tags')
-  }
-  
-  return response.json()
+  return dbData.tags
 }
 
 // Fetch user by name
 export async function getUser(name: string): Promise<User | null> {
   await delay(300)
   
-  const response = await fetch(`${API_BASE_URL}/users?name=${name}`, {
-    next: { 
-      revalidate: 3600, // Revalidate every hour
-      tags: ['users', `user-${name}`] 
-    }
-  })
-  
-  if (!response.ok) {
-    throw new Error('Failed to fetch user')
-  }
-  
-  const users = await response.json()
-  return users[0] || null
+  const user = dbData.users.find(user => user.name === name)
+  return user || null
 }
 
 // Search posts
 export async function searchPosts(query: string): Promise<Post[]> {
   await delay(1200)
   
-  const response = await fetch(`${API_BASE_URL}/posts?q=${encodeURIComponent(query)}`, {
-    next: { 
-      revalidate: 1800, // Revalidate every 30 minutes
-      tags: ['posts', 'search'] 
-    }
-  })
-  
-  if (!response.ok) {
-    throw new Error('Failed to search posts')
-  }
-  
-  return response.json()
+  const lowercaseQuery = query.toLowerCase()
+  return dbData.posts.filter(post => 
+    post.title.toLowerCase().includes(lowercaseQuery) ||
+    post.excerpt.toLowerCase().includes(lowercaseQuery) ||
+    post.content.toLowerCase().includes(lowercaseQuery) ||
+    post.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery))
+  )
 }
 
 // Get related posts
 export async function getRelatedPosts(postId: number, limit: number = 3): Promise<Post[]> {
   await delay(600)
   
-  const response = await fetch(`${API_BASE_URL}/posts?id_ne=${postId}&_limit=${limit}`, {
-    next: { 
-      revalidate: 1800, // Revalidate every 30 minutes
-      tags: ['posts', 'related'] 
-    }
-  })
-  
-  if (!response.ok) {
-    throw new Error('Failed to fetch related posts')
-  }
-  
-  return response.json()
+  return dbData.posts
+    .filter(post => post.id !== postId)
+    .slice(0, limit)
 }
