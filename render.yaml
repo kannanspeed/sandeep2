@@ -1,15 +1,12 @@
 services:
   - type: web
     name: kannan-blogs
-    env: node
+    env: docker
     plan: free
-    buildCommand: npm ci && npm run build
-    startCommand: npm start
+    dockerfilePath: ./Dockerfile
     envVars:
       - key: NODE_ENV
         value: production
-      - key: NEXT_TELEMETRY_DISABLED
-        value: 1
     healthCheckPath: /
     autoDeploy: true
     branch: main
